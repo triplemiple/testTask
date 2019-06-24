@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="suite">
+    <parameter name="browser" value="chrome"/>
+
+    <test name="test1_1" verbose="1">
+        <classes>
+            <class name="test.MainPageSuite">
+                <methods>
+                    <include name="test1_1" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="test1_2" verbose="1">
+        <parameter name="amount" value="25"/>
+        <parameter name="query" value="SQL"/>
+        <classes>
+            <class name="test.MainPageSuite">
+                <methods>
+                    <include name="test1_2_1" />
+                    <include name="test1_2_2" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="test2_1" verbose="1">
+        <classes>
+            <class name="test.ShowAllQueriesSuite">
+                <methods>
+                    <include name="test2_1" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="test2_2" verbose="1">
+        <parameter name="amount" value="50"/>
+        <classes>
+            <class name="test.ShowAllQueriesSuite">
+                <methods>
+                    <include name="test2_2" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="test2_3" verbose="1">
+        <parameter name="amount" value="50"/>
+        <classes>
+            <class name="test.ShowAllQueriesSuite">
+                <methods>
+                    <include name="test2_3" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="test3_1" verbose="1">
+        <parameter name="amount" value="25"/>
+        <parameter name="query" value="SQL"/>
+        <classes>
+            <class name="test.QueryResultSuite">
+                <methods>
+                    <include name="test3_1" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="test3_2" verbose="1">
+        <classes>
+            <class name="test.QueryResultSuite">
+                <methods>
+                    <include name="test3_2" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="test4_1" verbose="1">
+        <parameter name="amount" value="25"/>
+        <classes>
+            <class name="test.SearchQuerySuite">
+                <methods>
+                    <include name="test4_1" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
